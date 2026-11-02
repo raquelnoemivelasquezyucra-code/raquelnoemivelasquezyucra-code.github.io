@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Raquel Noemi Velasquez Yucra, estudiante de Contabilidad en la Universidad Católica San Pablo (Arequipa). Perfil, cursos, docentes y contacto.">
+<meta name="theme-color" content="#f4eee6">
+<title>Raquel Noemi Velasquez Yucra | Estudiante de Contabilidad · UCSP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#f4eee6; --paper:#fbf7f1; --ink:#2b211d; --muted:#6b5d55;
+  --rose:#7a3b48; --quartz:#ead7d4; --sand:#b89a7a; --rule:#dccfc0;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bone);color:var(--ink);font:17px/1.65 var(--sans)}
+a{color:var(--rose)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+
+/* barra superior */
+.nav{position:sticky;top:0;z-index:10;background:rgba(244,238,230,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:700 1.5rem var(--serif);color:var(--rose);text-decoration:none;letter-spacing:.02em}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.nav ul a{color:var(--ink);text-decoration:none;font-size:.95rem;font-weight:500}
+.nav ul a:hover{color:var(--rose)}
+
+/* portada */
+.hero{padding:72px 0 64px;background:
+  radial-gradient(900px 380px at 85% 0%,var(--quartz),transparent 70%),var(--bone)}
+.hero .wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;align-items:center}
+.hero h1{font:700 clamp(2.8rem,7vw,5rem)/1.02 var(--serif);margin:0 0 18px;letter-spacing:-.01em;animation:subir .9s ease both}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--rose)}
+.rol{font-size:1.15rem;color:var(--muted);margin:0 0 8px}
+.lema{font:italic 500 1.35rem/1.4 var(--serif);margin:18px 0 28px;max-width:30ch}
+.botones{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--rose);transition:background .2s,color .2s}
+.btn.lleno{background:var(--rose);color:#fff}
+.btn.lleno:hover{background:#612e39;border-color:#612e39}
+.btn.vacio{color:var(--rose)}
+.btn.vacio:hover{background:var(--rose);color:#fff}
+
+.ficha{background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:28px;box-shadow:0 18px 40px -22px rgba(74,42,49,.35);animation:subir .9s .15s ease both}
+.retrato{width:132px;height:132px;border-radius:50%;margin:0 0 20px;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,var(--quartz),var(--sand));display:grid;place-items:center;
+  font:700 2.6rem var(--serif);color:var(--rose);border:4px solid var(--paper);box-shadow:0 0 0 1px var(--rule)}
+.retrato img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ficha dl{margin:0}
+.ficha div{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px dotted var(--sand)}
+.ficha div:last-child{border:0}
+.ficha dt{color:var(--muted);font-size:.9rem}
+.ficha dd{margin:0;font-weight:600;text-align:right}
+@keyframes subir{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* secciones */
+section{padding:72px 0;border-top:1px solid var(--rule)}
+h2{font:700 clamp(2rem,4.5vw,2.8rem)/1.1 var(--serif);margin:0 0 10px}
+h2::after{content:"";display:block;width:56px;height:3px;background:var(--rose);margin-top:14px}
+.intro{color:var(--muted);margin:16px 0 36px;max-width:56ch}
+
+.sobre{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:start}
+.cita{font:italic 500 1.9rem/1.3 var(--serif);color:var(--rose);border-left:3px solid var(--sand);padding-left:20px;margin:0}
+.sobre p{margin:0 0 16px}
+
+.fort{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.fort div{padding:26px 24px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--paper)}
+.fort b{display:block;font:700 1.35rem var(--serif);color:var(--rose);margin-bottom:6px}
+.fort span{color:var(--muted);font-size:.96rem}
+
+.curso{display:grid;grid-template-columns:1fr 1.2fr;gap:12px 32px;padding:22px 0;border-bottom:1px solid var(--rule);align-items:center}
+.curso:first-of-type{border-top:1px solid var(--rule)}
+.curso h3{font:700 1.45rem var(--serif);margin:0}
+.docs{display:flex;flex-wrap:wrap;gap:8px}
+.doc{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;background:var(--paper);border:1px solid var(--rule);border-radius:999px;font-size:.93rem}
+.doc small{color:var(--muted)}
+.doc a{font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--quartz)}
+.doc a:hover{border-color:var(--rose)}
+
+.comp{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.comp li{background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--rose);padding:16px 18px}
+.comp a{font-weight:600;text-decoration:none}
+.comp a:hover{text-decoration:underline}
+.sin{padding:26px;border:1px dashed var(--sand);color:var(--muted);text-align:center;margin:0}
+.companeros:has(li) .sin{display:none}
+
+.cierre{background:var(--rose);color:#fff;text-align:center;border:0}
+.cierre h2{color:#fff}
+.cierre h2::after{margin:14px auto 0;background:var(--quartz)}
+.cierre p{max-width:46ch;margin:16px auto 28px;color:#f3e4e2}
+.cierre .btn{border-color:#fff;color:#fff}
+.cierre .btn.lleno{background:#fff;color:var(--rose)}
+.cierre .btn:hover{background:var(--quartz);color:var(--rose);border-color:var(--quartz)}
+footer{padding:26px 0;text-align:center;color:var(--muted);font-size:.9rem}
+
+@media (max-width:820px){
+  .hero .wrap,.sobre{grid-template-columns:1fr}
+  .fort{grid-template-columns:1fr 1fr}
+  .curso{grid-template-columns:1fr}
+  .nav ul{gap:14px}
+  .nav ul li:nth-child(n+4){display:none}
+}
+@media (max-width:520px){.fort{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Principal">
+  <div class="wrap">
+    <a class="logo" href="#inicio">RV</a>
+    <ul>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#fortalezas">Fortalezas</a></li>
+      <li><a href="#cursos">Cursos</a></li>
+      <li><a href="#companeros">Compañeros</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <p class="rol">Estudiante de Contabilidad · UCSP</p>
+      <h1>Raquel Noemi <em>Velasquez</em> Yucra</h1>
+      <p class="lema">Números con propósito, liderazgo con vocación de servicio.</p>
+      <div class="botones">
+        <a class="btn lleno" href="https://www.linkedin.com/in/raquel-noemi-velasquez-yucra-216694434/">Mi LinkedIn</a>
+        <a class="btn vacio" href="https://github.com/raquelnoemivelasquezyucra-code">Mi GitHub</a>
+      </div>
+    </div>
+    <aside class="ficha" aria-label="Datos académicos">
+      <div class="retrato" aria-hidden="true">RV<img src="foto.jpg" alt="" onerror="this.remove()"></div>
+      <dl>
+        <div><dt>Carrera</dt><dd>Contabilidad</dd></div>
+        <div><dt>Universidad</dt><dd>Católica San Pablo</dd></div>
+        <div><dt>Ciudad</dt><dd>Arequipa, Perú</dd></div>
+        <div><dt>Etapa</dt><dd>Tercer semestre</dd></div>
+        <div><dt>Carga actual</dt><dd>8 cursos · 24 créditos</dd></div>
+      </dl>
+    </aside>
+  </div>
+</header>
+
+<main>
+<section id="sobre-mi">
+  <div class="wrap">
+    <h2>Sobre mí</h2>
+    <p class="intro">Quién soy y hacia dónde voy.</p>
+    <div class="sobre">
+      <blockquote class="cita">No me rindo: busco la manera de salir adelante.</blockquote>
+      <div>
+        <p>Soy estudiante de tercer semestre de Contabilidad en la Universidad Católica San Pablo (UCSP), en Arequipa. Me atraen los números, el movimiento del mercado y la economía; por eso elegí esta carrera.</p>
+        <p>Soy una persona resiliente. Me motiva la competitividad sana, me gusta apoyar a las demás personas y disfruto liderar equipos y proyectos.</p>
+        <p>Creo que la transparencia es un pilar de la profesión contable: presentar información financiera clara y veraz es una responsabilidad ética y la base para que las organizaciones tomen buenas decisiones.</p>
+        <p>Mi meta es convertirme en una contadora que aporte valor a las organizaciones mediante el análisis financiero y la comprensión de la economía, y que crezca como líder en cada espacio donde participe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fortalezas">
+  <div class="wrap">
+    <h2>Mis fortalezas</h2>
+    <p class="intro">Lo que aporto a un equipo de trabajo.</p>
+    <div class="fort">
+      <div><b>Resiliencia</b><span>Perseverancia para cumplir mis objetivos, incluso cuando hay obstáculos.</span></div>
+      <div><b>Liderazgo</b><span>Iniciativa para guiar equipos y proyectos hacia resultados.</span></div>
+      <div><b>Espíritu competitivo</b><span>Me impulsa a mejorar y a dar siempre un paso más.</span></div>
+      <div><b>Vocación de servicio</b><span>Disposición para apoyar a quienes me rodean.</span></div>
+      <div><b>Curiosidad y responsabilidad</b><span>Aprendo con interés y cumplo con compromiso.</span></div>
+      <div><b>Ética y transparencia</b><span>Información clara y veraz en todo lo que hago.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="cursos">
+  <div class="wrap">
+    <h2>Mis cursos y docentes</h2>
+    <p class="intro">Semestre 2026-II. Cada docente enlaza a su perfil de LinkedIn.</p>
+
+    <div class="curso"><h3>Cálculo en una Variable</h3>
+      <div class="docs"><span class="doc">Jesús Enrique Achire Quispe <a href="https://www.linkedin.com/in/jesus-enrique-achire-quispe-a842303b6/">LinkedIn</a></span></div></div>
+
+    <div class="curso"><h3>Liderazgo</h3>
+      <div class="docs"><span class="doc">Claudia Calisaya Carpio <a href="https://www.linkedin.com/in/claudia-calisaya-carpio-5821a0173/">LinkedIn</a></span></div></div>
+
+    <div class="curso"><h3>Lógica</h3>
+      <div class="docs">
+        <span class="doc">Kristel Gisselle Loayza Cruz <a href="https://www.linkedin.com/in/kristel-gisselle-loayza-cruz-abb3b039b/">LinkedIn</a></span>
+        <span class="doc"><small>Asistente</small> Ana Lucía Huerta Salinas <a href="https://www.linkedin.com/in/ana-lucia-huerta/">LinkedIn</a></span>
+      </div></div>
+
+    <div class="curso"><h3>Historia de Occidente I</h3>
+      <div class="docs"><span class="doc">Gonzalo José Pedro Presbítero Rodríguez</span></div></div>
+
+    <div class="curso"><h3>Introducción a Computación</h3>
+      <div class="docs">
+        <span class="doc">Ernesto Cuadros Vargas <a href="https://www.linkedin.com/in/ecuadrosv/">LinkedIn</a></span>
+        <span class="doc"><small>Asistente</small> Rosmery Violeta Quispe Zavala <a href="https://www.linkedin.com/in/rosmery-violeta-quispe-zavala-58374638/">LinkedIn</a></span>
+      </div></div>
+
+    <div class="curso"><h3>Contabilidad III</h3>
+      <div class="docs"><span class="doc">Giovanna María García Jarufe <a href="https://www.linkedin.com/in/giovanna-m-garc%C3%ADa-jarufe/">LinkedIn</a></span></div></div>
+
+    <div class="curso"><h3>Legislación Laboral</h3>
+      <div class="docs">
+        <span class="doc">Giovanna María García Jarufe <a href="https://www.linkedin.com/in/giovanna-m-garc%C3%ADa-jarufe/">LinkedIn</a></span>
+        <span class="doc">Carlos Rodrigo Abarca Rubianes <a href="https://www.linkedin.com/in/carlos-abarca-rubianes-b2242a35/">LinkedIn</a></span>
+      </div></div>
+
+    <div class="curso"><h3>Filosofía de la Naturaleza</h3>
+      <div class="docs"><span class="doc">David Luis Matto Neyra <a href="https://www.linkedin.com/in/david-matto-neyra-2773a73a7/">LinkedIn</a></span></div></div>
+  </div>
+</section>
+
+<section id="companeros" class="companeros">
+  <div class="wrap">
+    <h2>Páginas de mis compañeros</h2>
+    <p class="intro">Una red que crece: aquí enlazo las páginas web de mis compañeros de clase.</p>
+
+    <ul class="comp">
+      <!-- ============================================================
+           PARA AGREGAR UN COMPAÑERO:
+           1) Copia la línea de ejemplo de abajo.
+           2) Pégala debajo de "AQUÍ PEGA A TUS COMPAÑEROS".
+           3) Cambia el link y el nombre. Nada más.
+           Ejemplo (quita los signos de comentario para activarlo):
+           <li><a href="https://usuario.github.io">Nombre Apellido</a></li>
+           ============================================================ -->
+
+      <!-- AQUÍ PEGA A TUS COMPAÑEROS -->
+
+    </ul>
+    <p class="sin">Muy pronto: las páginas de mis compañeros aparecerán aquí.</p>
+  </div>
+</section>
+
+<section class="cierre" id="contacto">
+  <div class="wrap">
+    <h2>Conectemos</h2>
+    <p>Estoy abierta a conocer personas, aprender de profesionales y construir oportunidades en el mundo contable.</p>
+    <div class="botones" style="justify-content:center">
+      <a class="btn lleno" href="https://www.linkedin.com/in/raquel-noemi-velasquez-yucra-216694434/">Escríbeme en LinkedIn</a>
+      <a class="btn" href="https://github.com/raquelnoemivelasquezyucra-code">Ver mi GitHub</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Raquel Noemi Velasquez Yucra · Universidad Católica San Pablo, Arequipa</footer>
+
+</body>
+</html>
